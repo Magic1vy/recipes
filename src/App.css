@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form{
+  display: flex;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+  width: 100%;  
+  padding: 12px;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #0f3505;
+  margin-left: 0px;
+  border: 3px solid #9fd411;
+  background-color: rgba(223, 221, 221, 0.742);
+  border-radius: 7px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search button::before {
+  content: "\f002";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #9fd411;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.icons{
+  width: 32px;
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+}
+.list{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style: none;
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.803);
 }
-
-.App-link {
-  color: #61dafb;
+li{
+  display: block;
+  padding: 5px;
+  margin:10px;
+  text-shadow: 0 1px 0 rgb(174, 174, 174);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+h1, h2, h3, h4, p, ul{
+  font-family: 'Open Sans', sans-serif;
+  color: #0f3505;
+  text-align: center;  
+  text-shadow: 0 1px 0 rgb(227, 227, 227);
+}
+.item-card{
+border: 2px solid #9fd411;
+margin: 10px;
+border-radius: 7px;
+opacity: 0.8;
+padding: 7px;
+}
+.item-card:hover{
+  opacity: 1;
+}
+.tasty{
+  border-radius: 7px;
+  padding: 2px;
+}
+@media all and (max-width: 500px){
+  .tasty{
+      width: 90%;
   }
 }
